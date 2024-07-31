@@ -1,0 +1,411 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000000; /* Deep black background */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    padding: 15px 0;
+    border-bottom: 2px solid #ff004e; /* Neon pink border */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #00ffff; /* Neon cyan text */
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ff004e; /* Neon pink underline */
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+header nav ul li a:hover {
+    color: #ff004e; /* Neon pink on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('path-to-your-neon-background.jpg') no-repeat center center; /* Neon grid background */
+    background-size: cover;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #ff004e; /* Neon pink text */
+    text-shadow: 0 0 20px #ff004e, 0 0 30px #ff004e, 0 0 40px #ff004e; /* Neon glow effect */
+    animation: neonPulse 1.5s infinite alternate; /* Pulsing neon effect */
+}
+
+.hero .tagline {
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    font-size: 1.8em;
+    color: #00ffff; /* Neon cyan text */
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; /* Neon glow effect */
+}
+
+/* Neon pulse animation */
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 10px #ff004e, 0 0 20px #ff004e, 0 0 30px #ff004e;
+    }
+    to {
+        text-shadow: 0 0 20px #ff004e, 0 0 30px #ff004e, 0 0 40px #ff004e;
+    }
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    z-index: 0;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.info-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 3px solid #00ffff; /* Neon cyan border */
+    border-radius: 15px;
+    background-color: #333333; /* Dark grey background */
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5); /* Neon glow shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+.info-box h2 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff004e; /* Neon pink text */
+}
+
+.info-box p {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Light grey text */
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000000; /* Deep black background */
+}
+
+.projects h2 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff004e; /* Neon pink text */
+    text-shadow: 0 0 10px #ff004e, 0 0 20px #ff004e; /* Neon glow effect */
+}
+
+.project {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.project-cover, .project-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid #00ffff; /* Neon cyan border */
+    border-radius: 10px;
+}
+
+.project-cover {
+    background-color: #333333; /* Dark grey background */
+    z-index: 2;
+    transform: rotateY(0deg);
+    transition: transform 0.6s, box-shadow 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5); /* Neon glow shadow */
+}
+
+.project:hover .project-cover {
+    transform: rotateY(-180deg); /* Flip effect */
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.7); /* Intensified neon glow */
+}
+
+.project-content {
+    background-color: #222222; /* Darker grey background */
+    transform: rotateY(-180deg);
+    transition: transform 0.6s, box-shadow 0.3s;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5); /* Neon glow shadow */
+}
+
+.project:hover .project-content {
+    transform: rotateY(0deg); /* Show content on hover */
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.7); /* Intensified neon glow */
+}
+
+.project-cover img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #00ffff; /* Neon cyan border */
+}
+
+.project-cover h3 {
+    margin: 10px;
+    font-size: 1.5em;
+    color: #00ffff; /* Neon cyan text */
+    text-shadow: 0 0 10px #00ffff; /* Neon glow effect */
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.skills h2 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff004e; /* Neon pink text */
+    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background-color: #333333; /* Dark grey background */
+    border: 2px solid #00ffff; /* Neon cyan border */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 1.5em;
+    color: #00ffff; /* Neon cyan text */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.skill:hover {
+    background-color: #00ffff; /* Neon cyan background on hover */
+    color: #000000; /* Dark text on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Blog Section */
+.blog {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000000; /* Deep black background */
+}
+
+.blog h2 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff004e; /* Neon pink text */
+    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
+}
+
+.blog .post {
+    margin-bottom: 20px;
+    background-color: #333333; /* Dark grey background */
+    border: 2px solid #00ffff; /* Neon cyan border */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5); /* Neon glow shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog .post:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.7); /* Intensified neon glow */
+}
+
+.blog .post h3 {
+    font-size: 2em;
+    color: #ff004e; /* Neon pink text */
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
+}
+
+.blog .post p {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Light grey text */
+}
+
+.blog .post a {
+    text-decoration: none;
+    color: #00ffff; /* Neon cyan text */
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.blog .post a:hover {
+    color: #ff004e; /* Neon pink on hover */
+    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.contact h2 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff004e; /* Neon pink text */
+    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333333; /* Dark grey background */
+    border: 3px solid #00ffff; /* Neon cyan border */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5); /* Neon glow shadow */
+}
+
+.contact form label {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    color: #e0e0e0; /* Light text color */
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #ff004e; /* Neon pink */
+    outline: none;
+}
+
+.contact form button {
+    padding: 14px;
+    border: none;
+    background-color: #ff004e; /* Neon pink */
+    color: #ffffff; /* White text */
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #ff4500; /* Orange red */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    background-color: #222222; /* Dark background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+}
