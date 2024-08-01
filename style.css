@@ -267,59 +267,57 @@ header nav ul li a:hover {
     transform: translateY(-5px); /* Lift effect */
 }
 
-/* Blog Section */
-.blog {
+/* Education Section */
+.education {
     padding: 60px 20px;
     text-align: center;
-    background-color: #000000; /* Deep black background */
+    background-color: #1a1a1a; /* Dark background */
 }
 
-.blog h2 {
+.education h2 {
     font-family: 'Orbitron', sans-serif; /* Futuristic font */
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ff004e; /* Neon pink text */
-    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
-}
-
-.blog .post {
-    margin-bottom: 20px;
-    background-color: #333333; /* Dark grey background */
-    border: 2px solid #00ffff; /* Neon cyan border */
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5); /* Neon glow shadow */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.blog .post:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.7); /* Intensified neon glow */
-}
-
-.blog .post h3 {
-    font-size: 2em;
-    color: #ff004e; /* Neon pink text */
-    font-family: 'Orbitron', sans-serif; /* Futuristic font */
-    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
-}
-
-.blog .post p {
-    font-size: 1.2em;
-    color: #e0e0e0; /* Light grey text */
-}
-
-.blog .post a {
-    text-decoration: none;
     color: #00ffff; /* Neon cyan text */
-    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    text-shadow: 0 0 10px #00ffff; /* Neon glow effect */
+}
+
+.education .education {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    max-width: 600px; /* Centering content */
+    margin: 0 auto;
+    background-color: #333333; /* Dark grey background for contrast */
+    border: 3px solid #ff004e; /* Neon pink border */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(255, 0, 78, 0.5); /* Neon pink glow */
+}
+
+.education li {
+    margin: 20px 0; /* Space between items */
+    text-align: left; /* Align text to the left */
+    font-family: 'Arial', sans-serif; /* Clear, legible font */
+}
+
+.education a {
+    font-size: 1.8em; /* Larger font for school name */
+    color: #00ffff; /* Neon cyan */
+    text-decoration: none; /* Remove underline */
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.blog .post a:hover {
+.education a:hover {
     color: #ff004e; /* Neon pink on hover */
     text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
 }
+
+.education p {
+    font-size: 1.2em; /* Slightly smaller font for details */
+    color: #e0e0e0; /* Light grey text for readability */
+    margin-top: 10px; /* Space between link and details */
+}
+
 
 /* Contact Section */
 .contact {
@@ -338,7 +336,7 @@ header nav ul li a:hover {
 
 .contact form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     background-color: #333333; /* Dark grey background */
     border: 3px solid #00ffff; /* Neon cyan border */
     border-radius: 15px;
@@ -385,6 +383,23 @@ header nav ul li a:hover {
     background-color: #ff4500; /* Orange red */
     transform: translateY(-3px); /* Lift effect */
 }
+
+.contact-icons {
+    margin-top: 20px;
+}
+
+.contact-icon {
+    margin: 0 15px;
+    font-size: 2em;
+    color: #00ffff; /* Neon cyan text */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-icon:hover {
+    color: #ff004e; /* Neon pink on hover */
+    text-shadow: 0 0 10px #ff004e; /* Neon glow effect */
+}
+
 
 /* Footer */
 footer {
